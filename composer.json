@@ -16,7 +16,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=7.1",
-    "web3p/web3.php": "^0.2",
+    "sasou/web3.php": "^1.0",
     "sasou/ethereum-util": "^1.0",
     "kornrunner/ethereum-offline-raw-tx": "0.6.0"
   }

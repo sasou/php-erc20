@@ -10,7 +10,6 @@ namespace Lessmore92\Ethereum\Foundation;
 use kornrunner\Keccak;
 use Web3\Contract;
 use Web3\Providers\HttpProvider;
-use Web3\RequestManagers\HttpRequestManager;
 use Web3\Web3;
 
 abstract class ERC20
@@ -49,7 +48,7 @@ abstract class ERC20
      */
     public function __construct(string $contractAddress, string $abi, string $ethClient, $timeout = 2)
     {
-        $web3                  = new Web3(new HttpProvider(new HttpRequestManager($ethClient, $timeout)));
+        $web3                  = new Web3(new HttpProvider($ethClient, $timeout));
         $this->web3            = $web3;
         $this->abi             = $abi;
         $this->contractAddress = $contractAddress;
